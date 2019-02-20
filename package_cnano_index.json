@@ -40,6 +40,46 @@
          }
       ],
       "tools":[]
-    }
+    },
+    {
+        "name": "Curiosity Nano",
+        "maintainer": "Microchip",
+        "help": 
+        {
+          "online": "https://Microchip.com"
+        },
+        "websiteURL": "https://Microchip.com",      
+        "platforms": 
+        [
+          {
+            "category": "Contributed",
+            "help": 
+            {
+              "online": "Microchip.com"
+            },
+            "url": "https://github.com/lharing/arduino-cnano/releases/download/1.0.0/atmega4809-cnano-1.0.1.zip",
+            "checksum": "SHA-256:239ad22e29ca8e0183b0bde60d935645560bc0a644868594809a4893efcddc3a",
+            "archiveFileName": "arduino-cnano-1.0.1.zip",
+            "size": "23395",
+            "name": "ATmega4809 Curiosity Nano",
+            "version": "1.0.1",
+            "architecture": "megaavr",
+            "boards": 
+            [
+              {
+                "name": "ATmega4809 Curiosity Nano"
+              }
+            ],
+            "toolsDependencies": [
+                {
+                    "packager": "arduino",
+                     "name": "avr-gcc",
+                     "version": "5.4.0-atmel3.6.1-arduino2"
+                }
+            ]
+          }
+       ],
+       "tools":[]
+     }
   ]
 }
