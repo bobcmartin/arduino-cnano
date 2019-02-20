@@ -18,7 +18,7 @@
              "online": "Microchip.com"
            },
            "url": "https://github.com/lharing/arduino-cnano/releases/download/1.0.0/atmega4809-cnano-1.0.0.zip",
-           "checksum": "SHA-256:2ba190b48a851a2e9505d118ca86c61895f55889776b7b135d9c4895305d75c3",
+           "checksum": "SHA-256:59b53b8a5eb52e2a1214b182826d62e359848fc3f33fc93c3b7938233e501c8e",
            "archiveFileName": "arduino-cnano-1.0.0.zip",
            "size": "23395",
            "name": "ATmega4809 Curiosity Nano",
