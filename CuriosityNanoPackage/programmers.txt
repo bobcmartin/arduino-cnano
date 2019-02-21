@@ -1,0 +1,6 @@
+nedbg.name=Microchip PKOB Nano
+nedbg.communication=usb
+nedbg.protocol=npkob_updi
+nedbg.program.protocol=npkob_updi
+nedbg.program.tool=avrdude
+nedbg.program.extra_params=-Pusb

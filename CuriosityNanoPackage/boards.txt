@@ -1,0 +1,30 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+##############################################################
+
+atmega4809-cnano.name=ATmega4809 Curiosity Nano
+
+atmega4809-cnano.vid.0=0x03eb
+atmega4809-cnano.pid.0=0x2175
+
+atmega4809-cnano.upload.tool=arduino:avrdude
+atmega4809-cnano.upload.protocol=npkob_updi
+atmega4809-cnano.upload.maximum_size=49152
+atmega4809-cnano.upload.maximum_data_size=6144
+atmega4809-cnano.upload.speed=115200
+
+atmega4809-cnano.build.mcu=atmega4809
+atmega4809-cnano.build.f_cpu=16000000L
+atmega4809-cnano.build.board=AVR_ATMEGA4809_CNANO
+atmega4809-cnano.build.core=arduino:arduino
+atmega4809-cnano.build.variant=atmega4809-cnano
+
+atmega4809-cnano.bootloader.tool=arduino:avrdude
+atmega4809-cnano.bootloader.SYSCFG0=0xC9
+atmega4809-cnano.fuses.file=fuses_4809.bin
+
+menu.mode=Registers emulation
+atmega4809-cnano.menu.mode.on=ATMEGA328
+atmega4809-cnano.menu.mode.on.build.extra_flags=-DUNO_WIFI_REV2_328MODE
+atmega4809-cnano.menu.mode.off=None (ATMEGA4809)
+##############################################################
