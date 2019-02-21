@@ -10,12 +10,14 @@
 
 #define NUM_DIGITAL_PINS            38
 #define NUM_ANALOG_INPUTS           8
+#define NUM_TOTAL_PINS              40
+
+// TODO Most of these defines can probalby removed
 //#define NUM_RESERVED_PINS           2  // (TOSC1/2)
 //#define NUM_INTERNALLY_USED_PINS    10 // (2 x Chip select + 2 x UART + 4 x IO + LED_BUILTIN + 1 BUTTON_BUILTIN)
 //#define NUM_I2C_PINS                2  // (SDA / SCL)
 //#define NUM_SPI_PINS                3  // (MISO / MOSI / SCK)
 //#define NUM_TOTAL_FREE_PINS         (NUM_DIGITAL_PINS)
-//#define NUM_TOTAL_PINS              (NUM_DIGITAL_PINS + NUM_RESERVED_PINS + NUM_INTERNALLY_USED_PINS + NUM_I2C_PINS + NUM_SPI_PINS)
 //#define ANALOG_INPUT_OFFSET         14
 //#define digitalPinToAnalogInput(p)  ((p < NUM_ANALOG_INPUTS) ? (p) : (p) - ANALOG_INPUT_OFFSET)
 
