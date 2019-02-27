@@ -21,10 +21,16 @@ atmega4809-cnano.build.variant=atmega4809-cnano
 
 atmega4809-cnano.bootloader.tool=arduino:avrdude
 atmega4809-cnano.bootloader.SYSCFG0=0xC9
-atmega4809-cnano.fuses.file=fuses_4809.bin
+atmega4809-cnano.fuses.file=fuses_4809_gpio.bin
 
-menu.mode=Registers emulation
-atmega4809-cnano.menu.mode.on=ATMEGA328
-atmega4809-cnano.menu.mode.on.build.extra_flags=-DUNO_WIFI_REV2_328MODE
-atmega4809-cnano.menu.mode.off=None (ATMEGA4809)
+menu.reset-config= Button configuration
+atmega4809-cnano.menu.reset-config.on=GPIO function on button
+atmega4809-cnano.menu.reset-config.on.fuses.file=fuses_4809_gpio.bin
+atmega4809-cnano.menu.reset-config.off=Reset function on button
+atmega4809-cnano.menu.reset-config.off.fuses.file=fuses_4809_reset.bin
+
+menu.spare-uart= Enable spare UART
+atmega4809-cnano.menu.spare-uart.on=On
+atmega4809-cnano.menu.spare-uart.on.build.extra_flags=-DCNANO_UART_SPARE
+atmega4809-cnano.menu.spare-uart.off=Off
 ##############################################################
