@@ -16,12 +16,12 @@
                         }
                     ],
                     "category": "Contributed",
-                    "checksum": "SHA-256:cd1547561f72314e8e3d620798186c560278095c5b12dff364321fc2e24fc3fc",
+                    "checksum": "SHA-256:ac93c02ae7e8821ad89bfb9d379b939b69bb8b93b9016d39219c8b0cfb58cddc",
                     "help": {
                         "online": "https://github.com/lharing/arduino-cnano"
                     },
                     "name": "Microchip Curiosity Nano boards",
-                    "size": 6460,
+                    "size": 6942,
                     "toolsDependencies": [
                         {
                             "name": "avr-gcc",

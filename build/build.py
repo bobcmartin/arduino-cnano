@@ -41,7 +41,7 @@ def update_package_index():
 
 def create_archive():
     print("Creating package archive {}".format(archive_file_name))
-    shutil.make_archive(archive_file_name.rstrip('.zip'), "zip", "../CuriosityNanoPackage")
+    shutil.make_archive(archive_file_name.rstrip('.zip'), "zip", root_dir="../", base_dir="CuriosityNanoPackage")
 
 
 def hash_archive(file_name):
