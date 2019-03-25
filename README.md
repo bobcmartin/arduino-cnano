@@ -12,7 +12,9 @@ https://raw.githubusercontent.com/lharing/arduino-cnano/master/package_cnano_ind
 must be added to the "Additional Boards Manger URLs" in the IDE preferences.
 
 ![Board Manager](./doc/arduino-ide-preferences.png)
-### Install package
+### Install megaAVR core package
+
+The Curiosity Nano board support package depends on the megaavr core which currently is not shipped by default with the Arduino IDE (last checked in version 1.85). To get this core install the "Arduino megaAVR Boards" board support package from the boards manager.
 
 ### Configuring avrdude
 
@@ -28,7 +30,3 @@ programmer
   usbpid = 0x2175;
 ;
 ```
-
-TODO where is this file maintained by Arduino so that this can be added by a pull-request.
-
-
