@@ -1,4 +1,4 @@
-__author__ = 'lharing'
+__author__ = 'bmartin'
 
 import os
 import json
@@ -6,9 +6,9 @@ import shutil
 import hashlib
 
 
-version = "1.0.0"
+version = "1.1"
 archive_file_name = "arduino-cnano-" + version + ".zip"
-archive_file_url = "https://github.com/lharing/arduino-cnano/releases/download/" + version + "/" + archive_file_name
+archive_file_url = "https://github.com/bobcmartin/arduino-cnano/releases/download/" + version + "/" + archive_file_name
 
 
 def update_package_index():
@@ -28,14 +28,22 @@ def update_package_index():
     package_template['platforms'][0]['checksum'] = "SHA-256:" + checksum
 
     # load package index
-    package_index_file = open("../package_cnano_index.json", "r+")
-    package_index = json.load(package_index_file)
+    if(os.path.isfile("../package_cnano_index.json")):
+        print("appending board index.json file")  
+        package_index_file = open("../package_cnano_index.json", "r+")
+        package_index = json.load(package_index_file)
+        json.dump(package_index, package_index_file, indent=4, sort_keys=True)
+        
+    else:
+        print("creating board index.json file")  
+        package_index_file = open("../package_cnano_index.json", "w")
+        package_index['packages'].append(package_template)
+        package_index_file.seek(0)
+        package_index_file.truncate()
+        json.dump(package_index, package_index_file, indent=4, sort_keys=True)
 
     # add new entry to package index
-    package_index['packages'].append(package_template)
-    package_index_file.seek(0)
-    package_index_file.truncate()
-    json.dump(package_index, package_index_file, indent=4, sort_keys=True)
+    
     package_index_file.close()
 
 
@@ -45,6 +53,7 @@ def create_archive():
 
 
 def hash_archive(file_name):
+    print("Generating new SHA256 hash")
     file = open(file_name, "rb")
     sha256 = hashlib.sha256()
     sha256.update(file.read())
